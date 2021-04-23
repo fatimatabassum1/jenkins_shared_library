@@ -48,6 +48,7 @@ pipeline {
 						steps {
 						 sshagent (credentials: ['ssh_ubuntu']) {
 								sh "ssh -o StrictHostKeyChecking=no -l ubuntu 54.86.177.177"
+							 	sh "docker run alpine"
 							  }
 						}
 					}
